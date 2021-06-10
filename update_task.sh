@@ -8,16 +8,16 @@
 WorkDir=$(cd $(dirname $0); pwd)
 JsList=$(cd $WorkDir; ls *.js | grep -Ei "j[drx]_" | perl -ne "{print unless /\.bak/}")
 JsList="$JsList backUp/xmSports.js"
-FileLoon=$WorkDir/Loon/lxk0301_LoonTask.conf
-FileQx=$WorkDir/QuantumultX/lxk0301_gallery.json
-FileQxRe=$WorkDir/QuantumultX/lxk0301_cookies.conf
-FileSurge=$WorkDir/Surge/lxk0301_Task.sgmodule.sgmodule
+FileLoon=$WorkDir/Loon/washala_LoonTask.conf
+FileQx=$WorkDir/QuantumultX/washala_gallery.json
+FileQxRe=$WorkDir/QuantumultX/washala_cookies.conf
+FileSurge=$WorkDir/Surge/washala_Task.sgmodule.sgmodule
 
 ## task清单头尾部内容
 CommentsLoon="# IOS Loon Task&Cookies配置 \n# TG通知频道 (https://t.me/jdfruit)\n# 使用方法:打开APP，顶部的配置 -> 脚本 -> 订阅脚本- > 点击右上角+号 -> 添加url链接\n\nhostname = me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com"
-CommentsQx='{\n  "name": "lxk0301 task gallery",\n  "description": "see you latter",\n  "task": ['
+CommentsQx='{\n  "name": "washala task gallery",\n  "description": "see you latter",\n  "task": ['
 CommentsQxRe="hostname = draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, me-api.jd.com"
-CommentsSurgeHead="#!name=lxk0301 iOS Tasks&Cookies Module\n#!desc=iOS Tasks&Cookies 模块配置\n\n# Task&Cookies模块配置 \n# TG讨论组 (https://t.me/JD_fruit_pet)\n\n[Script]"
+CommentsSurgeHead="#!name=washala iOS Tasks&Cookies Module\n#!desc=iOS Tasks&Cookies 模块配置\n\n# Task&Cookies模块配置 \n# TG讨论组 (https://t.me/JD_fruit_pet)\n\n[Script]"
 CommentsSurgeTail="\n[MITM]\nhostname = %APPEND% me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com"
 
 ## 执行写入
@@ -32,7 +32,7 @@ do
     if [[ -n $TaskName ]]; then
         echo -e "\n# $TaskName" >> $FileLoon
         grep -E "cron.+script-path.+https://gitee\.com.+tag" $file >> $FileLoon
-        grep -E "https://gitee\.com.+tag.+enabled" $file | perl -pe "{s|(.+\w)|\1\", \"addons\":\"https://gitee.com/lxk0301/jd_scripts/raw/master/QuantumultX/lxk0301_cookies.conf\"\},|; s|^|    \{\"config\":\"|}" >> $FileQx
+        grep -E "https://gitee\.com.+tag.+enabled" $file | perl -pe "{s|(.+\w)|\1\", \"addons\":\"https://gitee.com/washala/jd_scripts/raw/master/QuantumultX/washala_cookies.conf\"\},|; s|^|    \{\"config\":\"|}" >> $FileQx
         grep -E "type.+cronexp.+script-path.+https://gitee\.com" $file >> $FileSurge
     fi
     grep -E "http-(request|response).+script-path.+https://gitee\.com.+tag" $file | perl -pe "s|(.+tag=)(.+)|\n# \2\n\1\2|" >> $FileLoon

@@ -25,9 +25,9 @@ jobs:
       - name: commit
         run: |
           git config --global user.email ${{ secrets.EMAIL }}
-          git config --global user.name lxk0301
+          git config --global user.name washala
           git add .
-          git commit -m "更新Readme中脚本清单列表 by lxk0301 Github Action" -a || echo "Nothing to update"
+          git commit -m "更新Readme中脚本清单列表 by washala Github Action" -a || echo "Nothing to update"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
