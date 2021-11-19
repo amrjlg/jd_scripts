@@ -1,34 +1,19 @@
-## Special statement:
+# jd_scripts
 
-* Any unlocking and decryption analysis scripts involved in the Script project released by this warehouse are only used for testing, learning and research, and are forbidden to be used for commercial purposes. Their legality, accuracy, completeness and effectiveness cannot be guaranteed. Please make your own judgment based on the situation. .
+> * 无内置shareCodes
+> * 使用助力池
 
-* All resource files in this project are forbidden to be reproduced or published in any form by any official account or self-media.
+# Warning
 
-* This warehouse is not responsible for any script problems, including but not limited to any loss or damage caused by any script errors.
+> * 带助力功能的脚本要使用本仓库的，其他仓库的没有对接助力池
 
-* Any user who indirectly uses the script, including but not limited to establishing a VPS or disseminating it when certain actions violate national/regional laws or related regulations, this warehouse is not responsible for any privacy leakage or other consequences caused by this.
+> * IOS三件套在仓库内有订阅配置文件
 
-* Do not use any content of the Script project for commercial or illegal purposes, otherwise you will be responsible for the consequences.
+> * 新脚本使用[TypeScript](https://www.tslang.cn/)
 
-* If any unit or individual believes that the script of the project may be suspected of infringing on their rights, they should promptly notify and provide proof of identity and ownership. We will delete the relevant script after receiving the certification document.
+# whoami
 
-* Anyone who views this item in any way or directly or indirectly uses any script of the Script item should read this statement carefully. This warehouse reserves the right to change or supplement this disclaimer at any time. Once you have used and copied any relevant scripts or rules of the Script project, you are deemed to have accepted this disclaimer.
-
- **You must completely delete the above content from your computer or mobile phone within 24 hours after downloading.**  </br>
-> ***You have used or copied any script made by yourself in this warehouse, it is deemed to have accepted this statement, please read it carefully*** 
-
-
-## Special thanks to:
-
-
-* [@NobyDa](https://github.com/NobyDa)
-
-* [@chavyleung](https://github.com/chavyleung)
-
-* [@liuxiaoyucc](https://github.com/liuxiaoyucc)
-
-* [@Zero-S1](https://github.com/Zero-S1)
-
-* [@uniqueque](https://github.com/uniqueque)
-
-* [@nzw9314](https://github.com/nzw9314)
+```typescript
+let name: string = "JDHelloWorld.TS";
+console.log(name);
+```
